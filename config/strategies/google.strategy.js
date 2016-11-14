@@ -2,20 +2,18 @@ var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var User = require('../../models/userModel');
 
-
-
-module.exports = function () {
+module.exports = function() {
     passport.use(new GoogleStrategy({
             clientID: '510897002595-3elqiltjkohjfq9vli83rnrp9sgd2jcc.apps.googleusercontent.com',
             clientSecret: '0aWD1hSQYZ25iIWXcMYWiC2K',
             callbackURL: 'http://didnrsjina6.in.sas.com:3000/auth/google/callback'
         },
-        function (req, accessToken, refreshToken, profile, done) {
+        function(req, accessToken, refreshToken, profile, done) {
             var query = {
                 'google.id': profile.id
             };
 
-            User.findOne(query, function (error, user) {
+            User.findOne(query, function(error, user) {
                 if (user) {
                     console.log('found');
 

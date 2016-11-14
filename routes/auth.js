@@ -12,7 +12,8 @@ router.route('/google/callback')
 router.route('/google')
     .get(passport.authenticate('google', {
         scope: ['https://www.googleapis.com/auth/userinfo.profile',
-            'https://www.googleapis.com/auth/userinfo.email']
+            'https://www.googleapis.com/auth/userinfo.email'
+        ]
     }))
 
 router.route('/twitter/callback')
