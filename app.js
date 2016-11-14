@@ -17,6 +17,11 @@ var app = express();
 var db  = mongoose.connect('mongodb://172.26.123.20/revenueGame')
 
 
+app.use("/js",express.static("js"));
+app.use("/css",express.static("css"));
+app.use("/img",express.static("img"));
+app.use("/less",express.static("less"));
+app.use("/font-awesome",express.static("font-awesome"));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -35,7 +40,7 @@ app.use(session({secret: 'anything' , cookie: { secure: false }}));
 require('./config/passport')(app);
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/game', users);
 app.use('/auth',auth);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -54,5 +59,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+
 
 module.exports = app;

@@ -1,0 +1,81 @@
+@media (min-width: 200px) and (max-width: 700px) {
+    .table-responsive {
+        padding: 4px 9px;
+        font-size: 75%;
+        line-height: 1.2;
+    }
+    input {
+        width: 100%;
+        padding: 0 2%;
+    }
+
+    .responsive {
+        padding: 4px 9px;
+        font-size: 50%;
+        line-height: 1.2;
+    }
+
+    .btn-responsive {
+        padding: 4px 9px;
+        font-size: 0.35em;
+        line-height: 1.2;
+
+    }
+}
+
+body.modal-open-noscroll
+{
+    margin-right: 0!important;
+    overflow: hidden;
+}
+
+.modal-open-noscroll .navbar-fixed-top, .modal-open .navbar-fixed-bottom
+{
+    margin-right: 0!important;
+}
+
+.table td {
+    text-align: center;
+}
+
+.table th {
+    text-align: center;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+body .modal {
+    overflow: visible;
+}
+
+table {
+    border-spacing: 0;
+}
+
+table tr td {
+    border: 1px solid black;
+
+}
+
+table .cell-left {
+    border-right: 0;
+}
+
+table .cell-middle {
+    border-left: 0;
+    border-right: 0;
+    /*background-image: url("img/slash.png");*/
+    background-position: center center;
+}
+
+table .cell-right {
+    border-left: 0;
+}
