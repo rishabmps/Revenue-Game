@@ -28,7 +28,7 @@ router.get('/', function(req, res) {
                     req.user.email = user.email;
                     user.save();
                     console.log(req.user);
-                    res.render('users', {
+                    res.render('game', {
 
                         user: req.user
                     });
@@ -39,7 +39,7 @@ router.get('/', function(req, res) {
             }
         );
     } else {
-        res.render('users', {
+        res.render('game', {
             user: req.user
         });
     }

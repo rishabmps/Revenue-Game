@@ -9,7 +9,7 @@ var session = require('express-session');
 var mongoose = require('mongoose')
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var game = require('./routes/game');
 var auth = require('./routes/auth');
 
 
@@ -47,7 +47,7 @@ app.use(session({
 require('./config/passport')(app);
 
 app.use('/', index);
-app.use('/game', users);
+app.use('/game', game);
 app.use('/auth', auth);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
