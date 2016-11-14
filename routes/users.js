@@ -11,7 +11,7 @@ router.use('/', function(req, res, next) {
     })
     /* GET users listing. */
 router.get('/', function(req, res) {
-    
+
     if (!req.user.image) {
         facebookService.getImageAndEmail(req.user.facebook.token,
             function(results) {
@@ -31,8 +31,8 @@ router.get('/', function(req, res) {
                     user: req.user
                     });
                 });
-                
-                
+
+
 
             }
         );
