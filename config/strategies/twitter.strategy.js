@@ -7,7 +7,7 @@ module.exports = function(){
 	passport.use(new TwitterStrategy({
 		consumerKey: 'xUMWtkIDih6sl5swNMM4DgmMS',
 		consumerSecret: 'kEHQprLWHxAN3OTdaX2YjPP5aV42WusB9vTi6WYSvP1MEX8ESw',
-		callbackURL: 'http://localhost:3000/auth/twitter/callback',
+		callbackURL: 'http://didnrsjina6.in.sas.com:3000/auth/twitter/callback',
 		passReqToCallback: true
 	},
 	function(req,token,tokenSecret,profile,done){

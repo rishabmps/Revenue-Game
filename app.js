@@ -14,7 +14,7 @@ var auth = require('./routes/auth');
 
 
 var app = express();
-var db  = mongoose.connect('mongodb://localhost/revenueGame')
+var db  = mongoose.connect('mongodb://172.26.123.20/revenueGame')
 
 
 
@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({secret: 'anything'}));
+app.use(session({secret: 'anything' , cookie: { secure: false }}));
 
 require('./config/passport')(app);
 

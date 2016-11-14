@@ -8,7 +8,7 @@ module.exports = function () {
     passport.use(new GoogleStrategy({
             clientID: '510897002595-3elqiltjkohjfq9vli83rnrp9sgd2jcc.apps.googleusercontent.com',
             clientSecret: '0aWD1hSQYZ25iIWXcMYWiC2K',
-            callbackURL: 'http://localhost:3000/auth/google/callback'
+            callbackURL: 'http://didnrsjina6.in.sas.com:3000/auth/google/callback'
         },
         function (req, accessToken, refreshToken, profile, done) {
             var query = {
@@ -18,7 +18,7 @@ module.exports = function () {
             User.findOne(query, function (error, user) {
                 if (user) {
                     console.log('found');
-                   
+
                     done(null, user);
                 } else {
                     console.log('not found');
