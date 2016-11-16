@@ -20,6 +20,9 @@ var UserSchema = Schema({
     },
     google: {
         type: Object
+    },
+    source: {
+        type: String
     }
 });
 

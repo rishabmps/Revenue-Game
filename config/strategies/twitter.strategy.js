@@ -26,13 +26,17 @@ module.exports = function() {
                     console.log(profile);
                     user.image = profile._json.profile_image_url;
                     user.displayName = profile.displayName;
-
+                    user.id = profile.id;
+                    user.source = "twitter";
                     user.twitter = {};
                     user.twitter.id = profile.id;
 
                     user.twitter.token = token;
 
                     user.save();
+                    console.log("HI");
+                    console.log(user);
+
                     done(null, user);
                 }
             })

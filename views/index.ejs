@@ -9,6 +9,35 @@
 	<script src="/lib/jquery/dist/jquery.js"></script>
 	<script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
 	<title>IDeaS - Revenue Optimization Game</title>
+
+	<script>
+			(function(i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function() {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+							m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+			ga('create', {
+					trackingId: 'UA-79519182-2',
+					cookieDomain: 'auto',
+					name: 'UserTracker',
+					userId: '',
+					source: ''
+			});
+
+			ga('UserTracker.set', {
+					page: '/game',
+					title: 'Game'
+			});
+			ga('UserTracker.send', 'pageview');
+	</script>
+
+
 </head>
 
 <body>

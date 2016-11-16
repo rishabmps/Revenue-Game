@@ -16,7 +16,7 @@ module.exports = function(){
             User.findOne(query, function (error, user) {
                 if (user) {
                     console.log('found');
-                   
+
                     done(null, user);
                 } else {
                     console.log('not found');
@@ -25,11 +25,12 @@ module.exports = function(){
                     if(profile.emails!= null){
                         user.email = profile.emails[0].value;
                     }
-                    
+
                     //user.image =
                     //    profile._json.profile_image_url;
                     user.displayName = profile.displayName;
-
+										user.id = profile.id;
+										user.source = "facebook";
                     user.facebook = {};
                     user.facebook.id = profile.id;
                     user.facebook.token = accessToken;
@@ -37,7 +38,6 @@ module.exports = function(){
                     done(null, user);
                 }
             })
-           
+
     }));
-} 
-            
+}
