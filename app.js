@@ -12,8 +12,7 @@ var index = require('./routes/index');
 var game = require('./routes/game');
 var auth = require('./routes/auth');
 
-
-
+/*Making database connection*/
 var databseConnection = require('./config/databseConnection.js');
 databseConnection();
 
