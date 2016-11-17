@@ -6,8 +6,7 @@ var User = require('../models/userModel');
 router.use('/', function(req, res, next) {
         if (!req.user) {
             res.redirect('/');
-        }
-        else{
+        } else {
             next();
         }
     })
@@ -21,20 +20,20 @@ router.get('/', function(req, res) {
                 var query = {
                     'facebook.id': req.user.facebook.id
                 };
+
                 User.findOne(query, function(error, user) {
                     user.image = results.picture.data.url;
                     user.email = results.email;
                     req.user.image = user.image;
                     req.user.email = user.email;
                     user.save();
+                    console.log("Adding user image and email to database using service");
                     console.log(req.user);
                     res.render('game', {
 
                         user: req.user
                     });
                 });
-
-
 
             }
         );

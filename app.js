@@ -6,17 +6,18 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var session = require('express-session');
-var mongoose = require('mongoose')
 
+/*Routes*/
 var index = require('./routes/index');
 var game = require('./routes/game');
 var auth = require('./routes/auth');
 
 
+
+var databseConnection = require('./config/databseConnection.js');
+databseConnection();
+
 var app = express();
-var db = mongoose.connect('mongodb://172.26.123.20/revenueGame')
-
-
 app.use("/js", express.static("js"));
 app.use("/css", express.static("css"));
 app.use("/img", express.static("img"));
@@ -41,7 +42,9 @@ app.use(session({
     secret: 'anything',
     cookie: {
         secure: false
-    }
+    },
+    saveUninitialized: true,
+    resave: true
 }));
 
 require('./config/passport')(app);

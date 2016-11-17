@@ -1,12 +1,12 @@
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var User = require('../../models/userModel');
-
+var config = require('../properties');
 module.exports = function() {
     passport.use(new GoogleStrategy({
-            clientID: '510897002595-3elqiltjkohjfq9vli83rnrp9sgd2jcc.apps.googleusercontent.com',
-            clientSecret: '0aWD1hSQYZ25iIWXcMYWiC2K',
-            callbackURL: 'http://didnrsjina6.in.sas.com:3000/auth/google/callback'
+            clientID: config.googleAuth.clientID,
+            clientSecret: config.googleAuth.clientSecret,
+            callbackURL: config.googleAuth.callbackURL
         },
         function(req, accessToken, refreshToken, profile, done) {
             var query = {
@@ -14,6 +14,11 @@ module.exports = function() {
             };
 
             User.findOne(query, function(error, user) {
+
+                if (error) {
+                    console.error("Error while finding the user in google authentification", error);
+                }
+
                 if (user) {
                     console.log('found');
 
@@ -21,7 +26,6 @@ module.exports = function() {
                 } else {
                     console.log('not found');
                     var user = new User;
-                    console.log(profile._json);
                     user.email = profile.emails[0].value;
                     user.image = profile._json.image.url;
                     user.displayName = profile.displayName;
@@ -30,6 +34,8 @@ module.exports = function() {
                     user.google = {};
                     user.google.id = profile.id;
                     user.google.token = accessToken;
+                    console.log("Adding user:")
+                    console.log(user);
                     user.save();
                     done(null, user);
                 }

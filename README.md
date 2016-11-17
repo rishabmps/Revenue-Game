@@ -1,9 +1,18 @@
 # Revenue-Game
-To install you need ```node, npm, bower```.
-Use command npm install
 
-#### Map ```172.26.123.20``` to ```didnrsjina6.in.sas.com``` host.
-For Windows: Add```172.26.123.20	didnrsjina6.in.sas.com```  in  ```C:\Windows\System32\drivers\etc\hosts```
+To install/run you need `node, npm, bower, mongodb`. Use command `npm install`
 
-#### To run the project
-Use command ```./bin/www``` in cmd
+## Map `your IP address to didnrsjina6.in.sas.com`
+
+For Example in Windows: Add`172.26.123.20 didnrsjina6.in.sas.com` in `C:\Windows\System32\drivers\etc\hosts`
+
+## Configuration
+
+- Update google/twitter/facebook OAuth `clientID/consumerKey` and `clientSecret/consumerSecret` associated with your account in `config/properties.js`.
+- Do not use mine.
+- Update IP address in database url inside `config/properties.js`
+
+## To run the project
+
+- Use command `mongod` in cmd.
+- Use command `./bin/www` in another cmd

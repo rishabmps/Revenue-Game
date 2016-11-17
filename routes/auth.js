@@ -3,11 +3,13 @@ var passport = require('passport');
 var router = express.Router();
 
 
+
 router.route('/google/callback')
     .get(passport.authenticate('google', {
         successRedirect: '/game/',
         failure: '/error/'
-    }));
+    })
+  );
 
 router.route('/google')
     .get(passport.authenticate('google', {
