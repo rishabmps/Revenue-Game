@@ -1,10 +1,10 @@
 # Revenue-Game
 
-To install/run you need `node, npm, bower, mongodb`. Use command `npm install`
+To install/run you need node, npm, bower, mongodb. Use command `npm install`
 
-## Map `your IP address to didnrsjina6.in.sas.com`
+## Map your `IP address` to `didnrsjina6.in.sas.com`
 
-For Example in Windows: Add`172.26.123.20 didnrsjina6.in.sas.com` in `C:\Windows\System32\drivers\etc\hosts`
+For Example in Windows: Add `172.26.123.20 didnrsjina6.in.sas.com` in `C:\Windows\System32\drivers\etc\hosts`
 
 ## Configuration
 
