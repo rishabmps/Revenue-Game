@@ -14,7 +14,7 @@ var auth = require('./routes/auth');
 
 
 var app = express();
-var db = mongoose.connect('mongodb://172.26.123.20/revenueGame')
+var db = mongoose.connect('mongodb://192.168.0.18/revenueGame')
 
 
 app.use("/js", express.static("js"));

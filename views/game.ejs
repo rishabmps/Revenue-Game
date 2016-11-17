@@ -45,14 +45,14 @@
             trackingId: 'UA-79519182-2',
             cookieDomain: 'auto',
             name: 'UserTracker',
-            userId: '<%=user._id%>',
-            source: '<%=user.source%>'
+            userId: '<%=user._id%>'
         });
 
         ga('UserTracker.set', {
             page: '/game',
             title: 'Game'
         });
+        ga('UserTracker.set', 'dimension1', '<%=user.source%>');
         ga('UserTracker.send', 'pageview');
     </script>
 
