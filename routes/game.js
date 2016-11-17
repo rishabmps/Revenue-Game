@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var facebookService = require('../service/facebook')('1617228834969795', 'eaa57dfdbb3a243c83d3b1a17762cc40');
+var config = require('../config/properties');
+var facebookService = require('../service/facebook')(config.facebookAuth.clientID, config.facebookAuth.clientSecret);
 var User = require('../models/userModel');
 
 router.use('/', function(req, res, next) {
