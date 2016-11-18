@@ -22,7 +22,7 @@ app.use("/css", express.static("css"));
 app.use("/img", express.static("img"));
 app.use("/less", express.static("less"));
 app.use("/font-awesome", express.static("font-awesome"));
-
+app.use("/fonts", express.static("fonts"));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -51,6 +51,7 @@ require('./config/passport')(app);
 app.use('/', index);
 app.use('/game', game);
 app.use('/auth', auth);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');

@@ -45,7 +45,7 @@
             trackingId: 'UA-79519182-2',
             cookieDomain: 'auto',
             name: 'UserTracker',
-            userId: '<%=user._id%>'
+            userId: '<%=user.id%>'
         });
 
         ga('UserTracker.set', {
@@ -136,10 +136,17 @@
                     </ul>
                 </li>
                 <li class="info ">
-                    <a class="page-scroll">
-                        <div >Welcome <b><%=user.displayName%></b></div>
-                    </a>
+                  <a  href="javascript:;" data-toggle="collapse" data-target="#logout">
+                      <span class="glyphicon glyphicon-user"></span>
+                      <%=user.displayName%>
+                  </a>
+                  <ul id="logout" class="collapse dropdown-menu" >
+                      <li>
+                          <a href="/logout">logout</a>
+                      </li>
+                  </ul>
                 </li>
+
             </ul>
         </div>
     </div>

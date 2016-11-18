@@ -23,6 +23,9 @@ var UserSchema = Schema({
     },
     source: {
         type: String
+    },
+    id:{
+       type: Object
     }
 });
 

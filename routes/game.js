@@ -5,10 +5,16 @@ var facebookService = require('../service/facebook')(config.facebookAuth.clientI
 var User = require('../models/userModel');
 
 router.use('/', function(req, res, next) {
-        if (!req.user) {
-            res.redirect('/');
-        } else {
+
+        /* To prevent cache in browsers*/
+        res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+        res.header('Expires', '-1');
+        res.header('Pragma', 'no-cache');
+
+        if (req.isAuthenticated()) {
             next();
+        } else {
+            res.redirect('/');
         }
     })
     /* GET users listing. */
