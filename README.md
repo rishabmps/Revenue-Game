@@ -10,7 +10,7 @@ For Example in Windows:
 
 ## Configuration
 
-- Update google/twitter/facebook OAuth `clientID/consumerKey` and `clientSecret/consumerSecret` to the one associated with your account in `config/properties.js`.
+- Update google/twitter/facebook OAuth `clientID/consumerKey` and `clientSecret/consumerSecret`  in `config/properties.js` to the one associated with your account .
 - Update googleAnalytics.trackingId in `config/properties.js` to your own tracking ID.
 - Do not use mine.
 - Update IP address in database url inside `config/properties.js` Or update url to where your mongodb is hosted.
