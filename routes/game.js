@@ -3,7 +3,7 @@ var router = express.Router();
 var config = require('../config/properties');
 var facebookService = require('../service/facebook')(config.facebookAuth.clientID, config.facebookAuth.clientSecret);
 var User = require('../models/userModel');
-
+var analytics = require('../config/properties');
 router.use('/', function(req, res, next) {
         /* To prevent cache in browsers*/
         res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
@@ -36,7 +36,8 @@ router.get('/', function(req, res) {
                     console.log("Adding user image and email to database using service");
                     console.log(req.user);
                     res.render('game', {
-
+                        title: 'IDeaS - Revenue Optimization Game',
+                        trackingId: analytics.googleAnalytics.trackingId,
                         user: req.user
                     });
                 });
@@ -45,6 +46,8 @@ router.get('/', function(req, res) {
         );
     } else {
         res.render('game', {
+            title: 'IDeaS - Revenue Optimization Game',
+            trackingId: analytics.googleAnalytics.trackingId,
             user: req.user
         });
     }

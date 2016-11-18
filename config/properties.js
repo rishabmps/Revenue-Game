@@ -20,6 +20,10 @@ module.exports = {
 
     'databaseSettings': {
         'url': 'mongodb://172.26.123.20/revenueGame'
+    },
+
+    'googleAnalytics': {
+      trackingId: 'UA-79519182-2'
     }
 
 };

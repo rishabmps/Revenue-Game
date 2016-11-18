@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>IDeaS - Revenue Optimization Game</title>
+    <title><%=title%></title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
@@ -42,7 +42,7 @@
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
         ga('create', {
-            trackingId: 'UA-79519182-2',
+            trackingId: '<%=trackingId%>',
             cookieDomain: 'auto',
             name: 'UserTracker',
             userId: '<%=user.id%>'
@@ -142,7 +142,7 @@
                   </a>
                   <ul id="logout" class="collapse dropdown-menu" >
                       <li>
-                          <a href="/logout">logout</a>
+                          <a href="/logout">Log Out</a>
                       </li>
                   </ul>
                 </li>
