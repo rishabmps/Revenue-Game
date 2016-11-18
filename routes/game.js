@@ -5,7 +5,6 @@ var facebookService = require('../service/facebook')(config.facebookAuth.clientI
 var User = require('../models/userModel');
 
 router.use('/', function(req, res, next) {
-
         /* To prevent cache in browsers*/
         res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
         res.header('Expires', '-1');
