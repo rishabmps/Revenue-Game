@@ -52,8 +52,9 @@
             page: '/game',
             title: 'Game'
         });
-        ga('UserTracker.set', 'dimension1', '<%=user.source%>');
-        ga('UserTracker.send', 'pageview');
+        ga('UserTracker.send', 'pageview', {
+            'dimension1': '<%=user.source%>'
+        });
     </script>
 
     <!-- End of google-analytics -->
