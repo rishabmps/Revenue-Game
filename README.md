@@ -17,4 +17,4 @@ For Example in Windows:
 ## To run the project
 
 - Use command `mongod` in cmd.
-- Use command `./bin/www` in another cmd.
+- Navigate to directory and use command `./bin/www`.
