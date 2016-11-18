@@ -2,7 +2,7 @@
 
 To install you need node, npm, bower, mongodb. Use command `npm install`.
 
-## Map your `IP address` to `didnrsjina6.in.sas.com`
+## Map your IP address to didnrsjina6.in.sas.com
 
 For Example in Windows:
 
@@ -12,7 +12,7 @@ For Example in Windows:
 
 - Update google/twitter/facebook OAuth `clientID/consumerKey` and `clientSecret/consumerSecret` to the one associated with your account in `config/properties.js`.
 - Do not use mine.
-- Update IP address in database url inside `config/properties.js` Or update it where your mongodb is hosted.
+- Update IP address in database url inside `config/properties.js` Or update url to where your mongodb is hosted.
 
 ## To run the project
 
