@@ -35,7 +35,9 @@ module.exports = function() {
     mongoose.connection.on('error', function(err) {
         console.log("Mongoose error event:");
         console.log(err);
-        console.log("Trying again after 5 sec \n");
+        console.log("Trying to close the connection");
+        mongoose.connection.close();
+        console.log("Trying to reOpen connection after 5 sec \n");
         setTimeout(connectWithRetry, 5000);
     });
 
