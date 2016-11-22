@@ -1,6 +1,6 @@
 # Revenue-Game
 
-To install you need node, npm, bower, mongodb. Use command `npm install`.
+To install you need **node, npm, bower, mongodb**. Use command `npm install`.
 
 ## Map your IP address to didnrsjina6.in.sas.com
 
