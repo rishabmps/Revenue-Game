@@ -19,7 +19,7 @@ module.exports = {
     },
 
     'databaseSettings': {
-        'url': 'mongodb://172.26.123.20/revenueGame'
+        'url': 'mongodb://192.168.0.23/revenueGame'
     },
 
     'googleAnalytics': {
